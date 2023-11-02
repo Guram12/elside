@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@700&family=Onest:wght@600&family=Overpass:wght@400;700&family=Space+Mono:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Young+Serif&display=swap');
+@media (min-width: 600px){
+
+    
+    .big_main {
+
+        /* background: #181E27;  */
+        min-height: 100vh;
+        margin-top: -10px;
+        padding-bottom: 100px;
+    }
+    
+    .main_service_cont{
+        display: flex;
+        justify-content: center;
+    }
+    
+
+    .service_container{
+        display: flex;
+        justify-content:center;
+        align-items: center;
+        gap:40px;
+        margin-top: -25px;
+        color: aliceblue;
+        background: var(--black-gradient, radial-gradient(98.96% 98.96% at 50% 0%, #232A34 0%, #181E27 100%));
+        border-radius: 30px;
+        width: 300px;
+        box-shadow: 0 15px 15px rgba(0, 0, 0, 0.3);
+        cursor: pointer;
+        height: 50px;
+    
+    }
+
+    .service_icon{
+        width: 50px;
+        height: 50px;
+    }
+    
+    .for_center_all_div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+
+
+    .service_buttons_all{
+        display: flex;
+        justify-content: center; /* Centers child elements horizontally */
+        flex-direction: column; /* Keeps child elements stacked vertically */
+        align-items: center; /* Added to center items horizontally */
+        gap: 30px;
+        margin-top: 50px;
+        width: 100%; /* Ensure this container takes full width */
+    }
+
+
+    .serviceItem {
+        position: relative;
+        display: inline-block; /* or you can use flex, grid depending on your layout */
+        
+        width: 650px;
+        
+    }
+
+    .service_button{
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+        border-radius: 30px;
+        color: aliceblue;
+  
+        background: var(--black-gradient, radial-gradient(98.96% 98.96% at 50% 0%, #232A34 0%, #181E27 100%));
+        position: relative;
+        font-family: 'Young Serif', serif;
+        font-size: 20px; /* Adjust the size as needed */
+        font-weight: bold; /* Makes the text bold */
+        text-transform: uppercase; /* Converts text to uppercase */
+        letter-spacing: 1px; /* Increases spacing between letters */
+
+    }
+
+    .service_button:hover{
+        color: var(--Orange, #FC7614);
+    }
+
+
+
+    .buttonContainer {
+        position: relative;
+        overflow: hidden;
+        display: inline-block;
+        max-width: 100%;  /* Changed to max-width to allow it to be responsive */
+        width: 650px;  /* Make it take full width of the parent up to 800px */
+        height: 200px;
+        border-radius: 30px;
+        box-shadow: 0 15px 15px rgba(0, 0, 0, 0.3);
+    }
+
+
+    .hoverImage {
+        /* Adjust the position and size to fit the container */
+        position: absolute;
+        top: 0;
+        opacity: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        
+        object-fit: cover;
+        transition: opacity 0.3s ease-in-out, left 0.3s ease-in-out;
+    }
+
+    .serviceItem:hover .hoverImage {
+        opacity: 0.5;
+        left: 0;
+        
+    }
+
+    body {
+        margin: auto;
+        font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+        overflow: auto;
+        background: linear-gradient(315deg, rgb(37, 37, 37) 3%, rgb(55, 60, 65) 38%, rgb(40, 41, 41) 68%, rgb(31, 28, 28) 98%);
+        animation: gradient 15s ease infinite;
+        background-size: 400% 400%;
+        background-attachment: fixed;
+    }
+    
+    @keyframes gradient {
+        0% {
+            background-position: 0% 0%;
+        }
+        50% {
+            background-position: 100% 100%;
+        }
+        100% {
+            background-position: 0% 0%;
+        }
+    }
+    
+    .wave {
+        background: rgb(255 255 255 / 25%);
+        border-radius: 1000% 1000% 0 0;
+        position: fixed;
+        width: 200%;
+        height: 12em;
+        animation: wave 10s -3s linear infinite;
+        transform: translate3d(0, 0, 0);
+        opacity: 0.8;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+    }
+    
+    .wave:nth-of-type(2) {
+        bottom: -1.25em;
+        animation: wave 18s linear reverse infinite;
+        opacity: 0.8;
+    }
+    
+    .wave:nth-of-type(3) {
+        bottom: -2.5em;
+        animation: wave 20s -1s reverse infinite;
+        opacity: 0.9;
+    }
+    
+    @keyframes wave {
+        2% {
+            transform: translateX(1);
+        }
+    
+        25% {
+            transform: translateX(-25%);
+        }
+    
+        50% {
+            transform: translateX(-50%);
+        }
+    
+        75% {
+            transform: translateX(-25%);
+        }
+    
+        100% {
+            transform: translateX(1);
+        }
+    }
+
+}
